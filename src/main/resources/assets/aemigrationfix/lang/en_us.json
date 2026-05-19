@@ -1,0 +1,13 @@
+{
+  "itemGroup.aemigrationfix": "Example Mod Tab",
+  "block.aemigrationfix.example_block": "Example Block",
+  "item.aemigrationfix.example_item": "Example Item",
+
+  "aemigrationfix.configuration.title": "AE Migration Fix Configs",
+  "aemigrationfix.configuration.section.aemigrationfix.common.toml": "AE Migration Fix Configs",
+  "aemigrationfix.configuration.section.aemigrationfix.common.toml.title": "AE Migration Fix Configs",
+  "aemigrationfix.configuration.items": "Item List",
+  "aemigrationfix.configuration.logDirtBlock": "Log Dirt Block",
+  "aemigrationfix.configuration.magicNumberIntroduction": "Magic Number Text",
+  "aemigrationfix.configuration.magicNumber": "Magic Number"
+}

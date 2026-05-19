@@ -1,0 +1,27 @@
+modLoader="javafml"
+loaderVersion="[4,)"
+license="MIT"
+
+[[mods]]
+modId="aemigrationfix"
+version="1.0.1"
+displayName="AE Migration Fix"
+authors="GarlicGiraffe"
+
+description='''
+Fixes missing registry mappings when migrating expatternprovider to extendedae during world load.
+'''
+
+[[dependencies.aemigrationfix]]
+modId="neoforge"
+type="required"
+versionRange="[21,)"
+ordering="NONE"
+side="BOTH"
+
+[[dependencies.aemigrationfix]]
+modId="minecraft"
+type="required"
+versionRange="[1.21.1]"
+ordering="NONE"
+side="BOTH"
