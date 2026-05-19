@@ -2,28 +2,22 @@ package com.extended.aemigrationfix;
 
 import net.neoforged.bus.api.IEventBus;
 import net.neoforged.fml.common.Mod;
+import net.neoforged.neoforge.common.NeoForge;
 
 @Mod("aemigrationfix")
 public class ModMain {
     public ModMain(IEventBus modEventBus) {
-        System.out.println("AE Migration Fix: ModMain initializing");
+        System.out.println("[AE Migration Fix] ModMain initializing");
+        System.out.println("[AE Migration Fix] Mod event bus = " + modEventBus.getClass().getName());
 
         // Instantiate the previous mod class to wire its listeners
+        System.out.println("[AE Migration Fix] Creating AEMigrationFix instance");
         new AEMigrationFix(modEventBus);
 
-        // Try to register the item fix handler with the mod event bus.
-        // If the bus implementation supports class registration this will wire @SubscribeEvent handlers.
-        try {
-            modEventBus.register(Ae2ItemFixHandler.class);
-        } catch (NoSuchMethodError | Exception ignored) {
-            try {
-                // Fallback: register an instance
-                modEventBus.register(new Ae2ItemFixHandler());
-            } catch (NoSuchMethodError | Exception e) {
-                System.err.println("AE Migration Fix: failed to register Ae2ItemFixHandler on modEventBus: " + e.getMessage());
-            }
-        }
+        // Gameplay events fire on the NeoForge bus, not the mod lifecycle bus.
+        System.out.println("[AE Migration Fix] Registering Ae2ItemFixHandler on NeoForge.EVENT_BUS");
+        NeoForge.EVENT_BUS.register(Ae2ItemFixHandler.class);
 
-        System.out.println("AE Migration Fix: ModMain initialized");
+        System.out.println("[AE Migration Fix] ModMain initialized");
     }
 }
