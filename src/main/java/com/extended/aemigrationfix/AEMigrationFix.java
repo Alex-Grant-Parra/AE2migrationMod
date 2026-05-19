@@ -5,11 +5,9 @@ import net.minecraft.core.registries.BuiltInRegistries;
 import net.minecraft.resources.ResourceLocation;
 import net.neoforged.bus.api.IEventBus;
 import net.neoforged.bus.api.SubscribeEvent;
-import net.neoforged.fml.common.Mod;
 import net.neoforged.fml.event.lifecycle.FMLCommonSetupEvent;
 import net.neoforged.neoforge.registries.IRegistryExtension;
 
-@Mod("aemigrationfix")
 public class AEMigrationFix {
     private static final String MODID = "aemigrationfix";
     private static final String OLD_NS = "expatternprovider";

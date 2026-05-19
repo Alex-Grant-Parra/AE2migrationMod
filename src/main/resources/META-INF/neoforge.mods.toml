@@ -12,6 +12,8 @@ description='''
 Fixes missing registry mappings when migrating expatternprovider to extendedae during world load.
 '''
 
+entrypoints = { "main" = ["com.extended.aemigrationfix.ModMain"] }
+
 [[dependencies.aemigrationfix]]
 modId="neoforge"
 type="required"
